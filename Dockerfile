@@ -13,4 +13,4 @@ RUN pip install -r requirements.txt
 # copy whole project to your docker home directory. 
 COPY . /code/
 
-CMD gunicorn admin.wsgi:application
+CMD gunicorn admin.wsgi:application --bind 0.0.0.0:$PORT
